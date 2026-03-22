@@ -1,3 +1,3 @@
 # inet_4031_adduser_script
 # Program Description:
-This program automates the process of creating user accounts on ubuntu systems.
+This program automates the process of creating user accounts on Ubuntu systems. It makes the process of system administration much quicker, consistent, and is much less error-prone than adding one user at a time. Normally, a system admin would use the command line to create new users. He would use the sudo adduser username or sudo useradd -m username command, then assign passwords and create home directories. As you can see, this process looks like it takes a while and is pretty repetitive. This Python script uses the same Ubuntu user-management commands and runs them automatically through the program, so the user does not have to type each command manually every time.  

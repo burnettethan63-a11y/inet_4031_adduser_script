@@ -17,22 +17,22 @@ def main():
     for line in sys.stdin:
 
         # Check if the line starts with '#' 
-        # These lines should be ignored 
+        # These lines should be ignored if they contain '#'
         match = re.match("^#", line)
 
         # Remove whitespace and split the line into fields using ':'. 
         
         fields = line.strip().split(':')
 
-        # Skip processing if the line is a comment OR does not contain exactly 5 fields
-        # This ensures only properly formatted user records are processed
+        # Skip processing if the line is a comment or does not contain exactly 5 fields
+        # This ensures only correctly formatted user records are processed
         if match or len(fields) != 5:
             continue
 
-        # Extract user account information from the parsed fields
+        # Extracts user account information from the parsed fields
         username = fields[0]   # Username for the new account
         password = fields[1]   # Password for the account
-        # GECOS field stores user information such as full name (First Last)
+        # GECOS field stores user information such as full name 
         gecos = "%s %s,,," % (fields[3], fields[2])
 
         # Split the group field into a list of groups (comma-separated in input)
@@ -44,7 +44,7 @@ def main():
         # Build the command to create a new user with a disabled password and specified GECOS info
         cmd = "/usr/sbin/adduser --disabled-password --gecos '%s' %s" % (gecos, username)
 
-        # Uncomment to execute the command after testing
+        #  Uncomment to run the command when you are done dry testing
         # os.system(cmd)
 
         # Inform the admin that the password is being set for the user
@@ -54,7 +54,7 @@ def main():
         # The password is echoed twice to satisfy passwd requirements
         cmd = "/bin/echo -ne '%s\n%s' | /usr/bin/sudo /usr/bin/passwd %s" % (password, password, username)
 
-        # Uncomment to run the command when you are done
+        # Uncomment to run the command when you are done dry testing
         # os.system(cmd)
 
         # Loops through each group and assigns the user to valid groups
@@ -65,7 +65,7 @@ def main():
                 # Build command to add user to the specified group
                 cmd = "/usr/sbin/adduser %s %s" % (username, group)
 
-                #  Uncomment to run the command when you are done
+                #  Uncomment to run the command when you are done dry testing
                 # os.system(cmd)
 
 

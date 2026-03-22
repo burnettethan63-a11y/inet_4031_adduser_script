@@ -46,6 +46,8 @@ def main():
 
         #  Uncomment to run the command when you are done dry testing
         # os.system(cmd)
+        # Uncomment to execute the command after testing
+        #os.system(cmd)
 
         # Inform the admin that the password is being set for the user
         print("==> Setting the password for %s..." % (username))
@@ -56,6 +58,8 @@ def main():
 
         # Uncomment to run the command when you are done dry testing
         # os.system(cmd)
+        # Uncomment to run the command when you are done
+       # os.system(cmd)
 
         # Loops through each group and assigns the user to valid groups
         for group in groups:
@@ -67,6 +71,11 @@ def main():
 
                 #  Uncomment to run the command when you are done dry testing
                 # os.system(cmd)
+
+
+
+                #  Uncomment to run the command when you are done
+               # os.system(cmd)
 
 
 if __name__ == '__main__':

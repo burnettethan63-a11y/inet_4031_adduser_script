@@ -15,3 +15,4 @@ The file contains one user per line, and each of the lines must five fields that
 * Groups: any assigned groups
 
 # Command Execution
+To run the code you need to make the python file exexutable by using (chmod +x create-users.py). Then redirect input to the file by using (./create-users.py < create-users.input). Then run it by using (sudo ./create-users.py < create-users.input)

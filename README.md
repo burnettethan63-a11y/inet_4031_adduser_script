@@ -7,8 +7,8 @@ The purpose of this scripting program is to automate the creation of user accoun
 
 # Input file format:
 The file contains one user per line, and each of the lines must five fields that are seperated by colons. username:password:last:first:groups. 
-Purpose of each field:
-Username: Login name for the new account
+* Purpose of each field:
+* Username: Login name for the new account
 Password: The accounts assigned password
 Last: Users last name
 First: Users first name
